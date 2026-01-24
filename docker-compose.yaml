@@ -14,7 +14,8 @@
 version: "3.8"
 networks:
   shared_net:
-    external: true
+    name: shared_net
+    driver: bridge
 services:
   server:
     image: ${BLNK_IMAGE:-jerryenebeli/blnk:0.12.1}

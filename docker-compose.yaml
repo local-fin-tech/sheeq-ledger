@@ -77,7 +77,6 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-blnk}
     volumes:
       - pg_data:/var/lib/postgresql/data
-      - ./postgres-init:/docker-entrypoint-initdb.d
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER:-postgres}"]
       interval: 10s

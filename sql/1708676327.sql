@@ -126,7 +126,7 @@ CREATE UNIQUE INDEX idx_unique_indicator_on_non_nulls ON blnk.balances (indicato
 -- +migrate Up
 INSERT INTO blnk.ledgers (name, ledger_id, created_at, meta_data)
 VALUES ('General Ledger', 'general_ledger_id', NOW(), '{}')
-    ON CONFLICT (ledger_id) DO NOTHING;
+ON CONFLICT (ledger_id) DO NOTHING;
 
 
 -- +migrate Down
